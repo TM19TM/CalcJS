@@ -1,0 +1,97 @@
+*{
+    /* Remove a margem e o preenchimento padrão de todos os elementos */
+    margin:0;
+    padding:0;
+}
+body{
+    /* Define um fundo gradiente em 45 graus que muda de laranja para azul */
+    background-image: linear-gradient(45deg, rgb(248, 136, 9),rgba(22, 116, 224, 0.842));
+    /* Define o tamanho do fundo como 400% da largura e altura, permitindo um efeito de animação */
+    background-size: 400% 400%;
+    /* Define a altura do corpo para 100% da altura da viewport */
+    height: 100vh;
+    /* Define a cor do texto como branca */
+    color:white;
+    /* Define a família de fontes do texto como Arial ou Helvetica */
+    font-family:Arial, Helvetica, sans-serif;
+    /* Centraliza o texto horizontalmente */
+    text-align: center;
+    /* Aplica a animação 'colors' com duração de 5 segundos, repetindo indefinidamente */
+    animation: colors 5s ease infinite;
+}
+
+@keyframes colors {
+    /* Animação que muda a posição do fundo para criar o efeito de transição de cores */
+    0% {
+        /* Início da animação com o fundo na posição 0% horizontal */
+        background-position: 0% 50%;
+    }
+    50% {
+        /* No meio da animação, o fundo está 100% à direita */
+        background-position: 100% 50%;
+    }
+    100% {
+        /* Final da animação volta o fundo para a posição inicial */
+        background-position: 0% 50%;
+    }
+}
+
+.CALCULADORA{
+    /* Posiciona o elemento da calculadora de forma absoluta na página */
+    position: absolute;
+    /* Define a cor de fundo com opacidade de 80%, tornando-a semitransparente */
+    background-color: rgba(0,0,0,0.8);
+    /* Centraliza a calculadora verticalmente e horizontalmente na página */
+    top: 50%;
+    left: 50%;
+    /* Usa a transformação para ajustar a posição no centro da tela */
+    transform: translate(-50%,-50%);
+    /* Arredonda os cantos da calculadora */
+    border-radius: 15px;
+    /* Define o preenchimento interno da calculadora */
+    padding: 15px;
+}
+
+.BTN{
+    /* Define a largura e a altura dos botões */
+    width: 50px;
+    height: 50px;
+    /* Define o tamanho da fonte nos botões */
+    font-size: 25px;
+    /* Muda o cursor para "ponteiro" ao passar sobre o botão, indicando que é clicável */
+    cursor: pointer;
+    /* Define a margem entre os botões */
+    margin: 3px;
+    /* Define a cor de fundo dos botões como cinza escuro */
+    background-color: rgb(32,32,32);
+    /* Remove a borda dos botões */
+    border: none;
+    /* Define a cor do texto dentro dos botões como branca */
+    color: white;
+}
+
+#RESULTADO{
+    /* Define a largura do campo de resultado */
+    width: 207px;
+    /* Define a cor de fundo do campo de resultado como branca */
+    background-color: white;
+    /* Define a altura do campo de resultado */
+    height: 30px;
+    /* Define uma margem ao redor do campo de resultado */
+    margin: 5px;
+    /* Define a cor do texto do resultado como preta */
+    color: black;
+    /* Alinha o texto à direita */
+    text-align: right;
+    /* Define o preenchimento interno do campo de resultado */
+    padding: 5px;
+}
+
+.TITULO{
+    /* Define a cor do texto do título como branca */
+    color: white;
+    /* Centraliza o texto do título */
+    text-align: center;
+    /* Define a família de fontes para o título */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

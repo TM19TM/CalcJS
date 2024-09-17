@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadorajs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="CALCULADORA"></div>
+        <!-- Cria um container div com a classe 'CALCULADORA' para conter os elementos da calculadora -->
+        <h2 class="TITULO"><i>Calculadora</i></h2>
+        <!-- Cabeçalho da calculadora com o texto 'Calculadora', estilizado em itálico -->
+        <p id="RESULTADO">0</p>
+        <!-- Parágrafo que exibe o resultado da operação, inicializado com '0', usando o ID 'RESULTADO' -->
+        <table>
+            <!-- Tabela que estrutura os botões da calculadora -->
+            <tr>
+                <!-- Linha da tabela contendo botões de limpar, apagar último caractere, divisão e multiplicação -->
+                <td><button class="BTN" onclick="clean()">C</button></td>
+                <!-- Botão 'C' que chama a função 'clean()' para limpar o resultado -->
+                <td><button class="BTN" onclick="back()"><-</button></td>
+                <!-- Botão de backspace que chama a função 'back()' para apagar o último caractere -->
+                <td><button class="BTN" onclick="insert('/')">/</button></td>
+                <!-- Botão de divisão que chama a função 'insert()' para inserir o caractere '/' no cálculo -->
+                <td><button class="BTN" onclick="insert('*')">X</button></td>
+                <!-- Botão de multiplicação que chama a função 'insert()' para inserir o caractere '*' -->
+            </tr>
+            <tr>
+                <!-- Linha da tabela contendo os números 9, 8, 7 e o botão de subtração -->
+                <td><button class="BTN" onclick="insert('9')">9</button></td>
+                <td><button class="BTN" onclick="insert('8')">8</button></td>
+                <td><button class="BTN" onclick="insert('7')">7</button></td>
+                <td><button class="BTN" onclick="insert('-')">-</button></td>
+            </tr>
+            <tr>
+                <!-- Linha da tabela contendo os números 4, 5, 6 e o botão de adição -->
+                <td><button class="BTN" onclick="insert('4')">4</button></td>
+                <td><button class="BTN" onclick="insert('5')">5</button></td>
+                <td><button class="BTN" onclick="insert('6')">6</button></td>
+                <td><button class="BTN" onclick="insert('+')">+</button></td>
+            </tr>
+            <tr>
+                <!-- Linha da tabela contendo os números 1, 2, 3 e o botão de igual -->
+                <td><button class="BTN" onclick="insert('1')">1</button></td>
+                <td><button class="BTN" onclick="insert('2')">2</button></td>
+                <td><button class="BTN" onclick="insert('3')">3</button></td>
+                <td rowspan="2"><button class="BTN" style="height: 106px;" onclick="calcular()">=</button></td>
+                <!-- Botão de igual, ocupando duas linhas, que chama a função 'calcular()' para calcular o resultado -->
+            </tr>            
+            <tr>
+                <!-- Última linha da tabela contendo o número 0 e o ponto decimal -->
+                <td colspan="2"><button class="BTN" style="width: 106px" onclick="insert('0')">0</button></td>
+                <!-- Botão do número 0, que ocupa duas colunas -->
+                <td><button class="BTN" onclick="insert('.')">.</button></td>
+                <!-- Botão de ponto decimal que chama a função 'insert()' para inserir um ponto no cálculo -->
+            </tr>
+        </table>
+        <!-- Fim da tabela de botões da calculadora -->
+    </div>
+    <!-- Fim do container da calculadora -->
+</body>
+<script src="index.js" type="text/javascript"></script>
+</html>
